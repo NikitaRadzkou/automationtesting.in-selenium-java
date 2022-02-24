@@ -12,6 +12,7 @@ public class Constants {
     public static final String CART_PAGE = "http://practice.automationtesting.in/basket/";
     public static final String CHECKOUT_PAGE = "http://practice.automationtesting.in/checkout/";
     public static final String ORDER_PAGE = "http://practice.automationtesting.in/checkout/order-received/";
+    public static final String MY_ACCOUNT_PAGE = "http://practice.automationtesting.in/my-account/";
   }
 
   public static class VerifyVariable {
@@ -37,4 +38,7 @@ public class Constants {
     public static final String ZIP = "110022";
   }
 
+  public static class Register {
+    public static final String REG_PASSWORD = "!?2aPY9nE3+QqB`k";
+  }
 }

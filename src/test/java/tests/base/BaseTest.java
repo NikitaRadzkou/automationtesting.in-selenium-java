@@ -19,6 +19,8 @@ public class BaseTest {
   protected CartPage cartPage = new CartPage(driver);
   protected CheckoutPage checkoutPage = new CheckoutPage(driver);
   protected OrderPage orderPage = new OrderPage(driver);
+  protected RegisterPage registerPage = new RegisterPage(driver);
+  protected MyAccountPage myAccountPage = new MyAccountPage(driver);
 
   @AfterClass
   public void clearCookiesAndLocalStorage() {

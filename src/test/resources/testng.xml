@@ -4,6 +4,7 @@
   <test name="D:/TESTS/automationtest-selenium-java/src/test/resources">
     <packages>
       <package name="tests.home"></package>
+      <package name="tests.registration"></package>
     </packages>
   </test>
 </suite>

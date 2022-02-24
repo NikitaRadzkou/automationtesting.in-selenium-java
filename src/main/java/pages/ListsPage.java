@@ -18,7 +18,7 @@ public class ListsPage extends BasePage {
     return this;
   }
 
-  public  ListsPage clickItem() {
+  public ListsPage clickItem() {
     WebElement firstItemList = driver.findElement(itemLists);
     waitElementIsVisible(firstItemList).click();
     return this;
