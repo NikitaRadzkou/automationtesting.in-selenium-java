@@ -5,6 +5,7 @@
     <packages>
       <package name="tests.home"></package>
       <package name="tests.registration"></package>
+      <package name="tests.login"></package>
     </packages>
   </test>
 </suite>

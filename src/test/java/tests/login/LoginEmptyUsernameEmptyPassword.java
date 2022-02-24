@@ -1,20 +1,19 @@
-package tests.registration;
+package tests.login;
 
 import org.testng.annotations.Test;
 import tests.base.BaseTest;
 
 import static constants.Constants.Urls.HOME_PAGE;
 
-public class RegistrationEmptyPassword extends BaseTest {
+public class LoginEmptyUsernameEmptyPassword extends BaseTest {
 
   @Test
-  public void ShouldErrorMessageEmptyPassword() {
+  public void ShouldDisplayErrorWithEmptyLoginAndEmptyPassword() {
     basePage.open(HOME_PAGE);
 
     homePage.clickMyAccount();
 
-    registerPage.typeEmail()
-      .clickRegisterBtn()
+    loginPage.clickLogin()
       .verifyErrorMessage();
   }
 }

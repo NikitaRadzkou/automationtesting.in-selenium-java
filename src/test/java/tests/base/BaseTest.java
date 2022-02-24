@@ -21,6 +21,7 @@ public class BaseTest {
   protected OrderPage orderPage = new OrderPage(driver);
   protected RegisterPage registerPage = new RegisterPage(driver);
   protected MyAccountPage myAccountPage = new MyAccountPage(driver);
+  protected LoginPage loginPage = new LoginPage(driver);
 
   @AfterClass
   public void clearCookiesAndLocalStorage() {

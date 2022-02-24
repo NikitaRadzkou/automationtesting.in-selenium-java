@@ -41,4 +41,11 @@ public class Constants {
   public static class Register {
     public static final String REG_PASSWORD = "!?2aPY9nE3+QqB`k";
   }
+
+  public static class Login {
+    public static final String LOGIN_USERNAME = "test12345@test.eu";
+    public static final String LOGIN_PASSWORD = "!?2aPY9nE3+QqB`k";
+    public static final String LOGIN_INC_USERNAME = "TEST12345";
+    public static final String LOGIN_INC_PASSWORD = "!?2APY9NE3+QQB`K";
+  }
 }
