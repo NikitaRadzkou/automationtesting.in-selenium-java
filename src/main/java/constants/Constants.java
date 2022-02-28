@@ -13,6 +13,8 @@ public class Constants {
     public static final String CHECKOUT_PAGE = "http://practice.automationtesting.in/checkout/";
     public static final String ORDER_PAGE = "http://practice.automationtesting.in/checkout/order-received/";
     public static final String MY_ACCOUNT_PAGE = "http://practice.automationtesting.in/my-account/";
+    public static final String MY_ACCOUNT_ORDERS_PAGE = "http://practice.automationtesting.in/my-account/orders/";
+    public static final String MY_ACCOUNT_DETAILS_PAGE = "http://practice.automationtesting.in/my-account/edit-account/";
   }
 
   public static class VerifyVariable {
@@ -31,11 +33,11 @@ public class Constants {
 
   public static class BillingDetails {
     public static final String FIRST_NAME = "Jane";
+    public static final String RENAME = "Mary";
     public static final String LAST_NAME = "Bronson";
     public static final String COMPANY = "Test Inc.";
     public static final String EMAIL = "test12345@test.eu";
     public static final String PHONE = "+375290001122";
-    public static final String COUNTRY = "India";
     public static final String ADDRESS = "Pushkina 7";
     public static final String APARTMENT = "42";
     public static final String CITY = "New York";

@@ -4,7 +4,6 @@ import common.CommonActions;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterTest;
 import pages.*;
 
 import static common.Config.CLEAR_COOKIES_AND_STORAGE;
