@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 public class CheckoutPage extends BasePage{
@@ -24,6 +25,10 @@ public class CheckoutPage extends BasePage{
   private final By state = By.id("billing_state");
   private final By postcode = By.id("billing_postcode");
   private final By placeOrder = By.id("place_order");
+  private final By countryLink = By.className("select2-choice");
+  private final By specialCountry = By.xpath("//ul[@class='select2-results']/li/div[text() = 'India']");
+  private final By stateLink = By.id("s2id_billing_state");
+  private final By specialState = By.xpath("//ul[@class = 'select2-results']/li[1]");
 
   public CheckoutPage verifyCheckoutUrl(String url) {
     String URL = driver.getCurrentUrl();
@@ -104,6 +109,22 @@ public class CheckoutPage extends BasePage{
   public CheckoutPage clickPlaceOrder() {
     WebElement placeOrderBtn = driver.findElement(placeOrder);
     waitElementIsVisible(placeOrderBtn).click();
+    return this;
+  }
+
+  public CheckoutPage selectSpecialCountry() {
+    WebElement countryElem = driver.findElement(countryLink);
+    waitElementIsVisible(countryElem).click();
+    WebElement specialStateElem = driver.findElement(specialCountry);
+    waitElementIsVisible(specialStateElem).click();
+    return this;
+  }
+
+  public CheckoutPage selectSpecialState() {
+    WebElement stateElem = driver.findElement(stateLink);
+    waitElementIsVisible(stateElem).click();
+    WebElement selectSpecialState = driver.findElement(specialState);
+    waitElementIsVisible(selectSpecialState).click();
     return this;
   }
 }

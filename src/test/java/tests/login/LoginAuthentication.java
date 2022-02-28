@@ -21,6 +21,5 @@ public class LoginAuthentication extends BaseTest {
 
     myAccountPage.clickLogout()
       .returnBack();
-
   }
 }

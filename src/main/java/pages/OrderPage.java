@@ -11,6 +11,8 @@ public class OrderPage extends BasePage {
   }
 
   private final By thankForOrder = By.className("woocommerce-thankyou-order-received");
+  private final By roamingPrice = By.cssSelector(":nth-child(2) > td > .woocommerce-Price-amount");
+  private final By subtotalPrice = By.cssSelector("tfoot :nth-child(1) td .amount");
 
   public OrderPage verifyOrderUrl(String url) {
     String URL = driver.getCurrentUrl();
@@ -23,6 +25,20 @@ public class OrderPage extends BasePage {
   public OrderPage waitLoadingPage() {
     WebElement thanks = driver.findElement(thankForOrder);
     waitElementIsVisible(thanks);
+    return this;
+  }
+
+  public OrderPage calcTaxPriceCommon() {
+    double roamingPriceFloat = Double.parseDouble(driver.findElement(roamingPrice).getText().replaceAll("[^0-9.]", ""));
+    double subtotalPriceFloat = Double.parseDouble(driver.findElement(subtotalPrice).getText().replaceAll("[^0-9.]", "")) * 0.05;
+    Assert.assertEquals(roamingPriceFloat, subtotalPriceFloat);
+    return this;
+  }
+
+  public OrderPage calcTaxPriceSpecial() {
+    double roamingPriceFloat = Double.parseDouble(driver.findElement(roamingPrice).getText().replaceAll("[^0-9.]", ""));
+    double subtotalPriceFloat = Double.parseDouble(driver.findElement(subtotalPrice).getText().replaceAll("[^0-9.]", "")) * 0.02;
+    Assert.assertEquals(roamingPriceFloat, subtotalPriceFloat);
     return this;
   }
 }

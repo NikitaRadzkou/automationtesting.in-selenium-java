@@ -16,6 +16,8 @@ public class ItemPage extends BasePage {
   private final By reviewsContent = By.id("reviews");
   private final By addToBasketBtn = By.className("single_add_to_cart_button");
   private final By countInput = By.xpath("//div[@class='quantity']/input");
+  private final By oldPrice = By.xpath("//p[@class='price']/del");
+  private final By newPrice = By.xpath("//p[@class='price']/ins");
 
   public ItemPage verifyItemUrl(String url) {
     String URL = driver.getCurrentUrl();
@@ -66,6 +68,14 @@ public class ItemPage extends BasePage {
     countInp.click();
     countInp.clear();
     countInp.sendKeys(String.valueOf(count));
+    return this;
+  }
+
+  public ItemPage verifyNewAndOldPrice() {
+    WebElement newPriceSpan = driver.findElement(newPrice);
+    WebElement oldPriceSpan = driver.findElement(oldPrice);
+    waitElementIsVisible(newPriceSpan);
+    waitElementIsVisible(oldPriceSpan);
     return this;
   }
 }

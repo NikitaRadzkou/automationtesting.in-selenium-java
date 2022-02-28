@@ -21,6 +21,12 @@ public class Constants {
     public static final String COUNT_ZERO = "0";
     public static final String COUPON = "krishnasakinala";
     public static final String COUNT_BOOKS = "3";
+    public static final int CATEGORY_ELEMENT = 0;
+    public static final String SEL_POPULARITY = "popularity";
+    public static final String SEL_RATING = "rating";
+    public static final String SEL_DATE = "date";
+    public static final String SEL_LOW_PRICE = "price";
+    public static final String SEL_HIGH_PRICE = "price-desc";
   }
 
   public static class BillingDetails {
@@ -34,7 +40,6 @@ public class Constants {
     public static final String APARTMENT = "42";
     public static final String CITY = "New York";
     public static final String STATE = "USA";
-    public static final String SPECIAL_STATE = "India";
     public static final String ZIP = "110022";
   }
 

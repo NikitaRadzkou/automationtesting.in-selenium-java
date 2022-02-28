@@ -18,6 +18,7 @@ public class HomePage extends BasePage {
   private final By arrivalLink = By.className("woocommerce-LoopProduct-link");
   private final By cartContents = By.className("cartcontents");
   private final By myAccount = By.id("menu-item-50");
+  private final By cart = By.className("wpmenucart-contents");
 
   public HomePage clickShopBtn() {
     WebElement shopBtnFind = driver.findElement(shopBtn);
@@ -67,14 +68,25 @@ public class HomePage extends BasePage {
   }
 
   public HomePage clickToCart() {
-    WebElement cartLink = driver.findElement(cartContents);
-    cartLink.click();
+    try {
+      Thread.sleep(2000);
+      WebElement cartLink = driver.findElement(cartContents);
+      cartLink.click();
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    }
     return this;
   }
 
   public HomePage clickMyAccount() {
     WebElement myAccountLink = driver.findElement(myAccount);
     waitElementIsVisible(myAccountLink).click();
+    return this;
+  }
+
+  public HomePage clickCartLink() {
+    WebElement cartLink = driver.findElement(cart);
+    waitElementIsVisible(cartLink).click();
     return this;
   }
 }
