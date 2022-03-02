@@ -1,4 +1,4 @@
-# Test kit on cypress for the site [practice.automationtesting.in](http://practice.automationtesting.in/)
+# Test kit on selenium for the site [practice.automationtesting.in](http://practice.automationtesting.in/)
 
 Test cases you can see [here](http://practice.automationtesting.in/test-cases/)
 
